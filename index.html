@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrairiePulse Research and Consulting LLP</title>
+<meta name="description" content="PrairiePulse is a global boutique consulting and social research firm. Objective-Led. Outcome-Delivered.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:       #0f1f3d;
+    --navy-deep:  #09152a;
+    --navy-mid:   #1a3060;
+    --white:      #ffffff;
+    --cloud:      #f4f6fb;
+    --cloud-mid:  #e8edf7;
+    --amber:      #c8860a;
+    --amber-bright: #e8a020;
+    --amber-pale: #fdf3e0;
+    --text-main:  #0f1f3d;
+    --text-body:  #2e3f5c;
+    --text-muted: #6b7a99;
+    --rule:       rgba(15,31,61,0.12);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans:  'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--white);
+    color: var(--text-main);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAVIGATION ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 4rem;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rule);
+    transition: box-shadow 0.3s;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--navy);
+    text-decoration: none;
+    line-height: 1.2;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--text-body);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-links .nav-cta {
+    background: var(--amber);
+    color: var(--white);
+    padding: 0.55rem 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .nav-links .nav-cta:hover { background: var(--amber-bright); color: var(--white); transform: translateY(-1px); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s; }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--navy-deep);
+    z-index: 950;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s, color 0.2s;
+  }
+
+  .mobile-menu a:hover { opacity: 1; color: var(--amber-bright); }
+
+  .mobile-close {
+    position: absolute;
+    top: 1.8rem; right: 2rem;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.2s;
+  }
+
+  .mobile-close:hover { color: var(--white); }
+
+  /* ─── SHARED SECTION ─── */
+  section { padding: 7rem 4rem; }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--amber);
+    border-radius: 2px;
+  }
+
+  .rule { border: none; border-top: 1px solid var(--rule); }
+
+  /* ─── HERO ─── */
+  #home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    background: var(--navy-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle diagonal geometric accent */
+  #home::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55%;
+    height: 120%;
+    background: linear-gradient(135deg, rgba(200,134,10,0.06) 0%, rgba(26,48,96,0.4) 60%, transparent 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 900px; }
+
+  .hero-tag {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber-bright);
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.2s forwards;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: var(--amber-bright);
+    border-radius: 2px;
+  }
+
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--amber-bright);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.72);
+    max-width: 540px;
+    line-height: 1.75;
+    margin-bottom: 2.8rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 0.9rem 2.2rem;
+    border-radius: 2px;
+    border: 2px solid var(--amber);
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--amber-bright); border-color: var(--amber-bright); transform: translateY(-2px); }
+
+  .btn-ghost {
+    display: inline-block;
+    color: rgba(255,255,255,0.75);
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+
+  .hero-microcopy {
+    margin-top: 1.4rem;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.4);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .hero-bottom {
+    position: absolute;
+    bottom: 3rem; right: 4rem;
+    text-align: right;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.2s forwards;
+  }
+
+  .hero-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ─── POSITIONING ─── */
+  #positioning {
+    background: var(--cloud);
+    padding: 6rem 4rem;
+  }
+
+  .positioning-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 0.5rem;
+  }
+
+  .positioning-headline {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.2vw, 2.9rem);
+    font-weight: 400;
+    line-height: 1.22;
+    color: var(--navy);
+  }
+
+  .positioning-headline em {
+    font-style: italic;
+    color: var(--amber);
+  }
+
+  .positioning-body {
+    font-size: 0.97rem;
+    line-height: 1.82;
+    color: var(--text-body);
+    margin-bottom: 1.4rem;
+  }
+
+  .positioning-body strong { color: var(--navy); font-weight: 600; }
+
+  /* ─── APPROACH ─── */
+  #approach { background: var(--white); }
+
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .approach-card {
+    background: var(--cloud);
+    padding: 2.8rem 2.4rem;
+    border-top: 3px solid var(--cloud-mid);
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  }
+
+  .approach-card:hover {
+    border-color: var(--amber);
+    box-shadow: 0 8px 32px rgba(15,31,61,0.08);
+    transform: translateY(-3px);
+  }
+
+  .approach-number {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--cloud-mid);
+    line-height: 1;
+    margin-bottom: 1.2rem;
+  }
+
+  .approach-label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+  }
+
+  .approach-title {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--navy);
+  }
+
+  .approach-desc {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.78;
+  }
+
+  /* ─── ENGAGEMENTS ─── */
+  #engagements { background: var(--cloud); }
+
+  .engagements-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 4rem;
+    align-items: end;
+  }
+
+  .engagements-headline {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.22;
+    color: var(--navy);
+  }
+
+  .engagements-subhead {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.78;
+  }
+
+  .engagement-list { display: flex; flex-direction: column; }
+
+  .engagement-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid var(--rule);
+    transition: padding-left 0.3s ease;
+  }
+
+  .engagement-item:first-child { border-top: 1px solid var(--rule); }
+  .engagement-item:hover { padding-left: 0.8rem; }
+
+  .engagement-number {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+  }
+
+  .engagement-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    color: var(--navy);
+  }
+
+  .engagement-desc {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.75;
+    max-width: 560px;
+  }
+
+  .engagement-for {
+    font-size: 0.7rem;
+    font-family: var(--sans);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    white-space: nowrap;
+    margin-top: 0.5rem;
+    padding: 0.45rem 1rem;
+    background: var(--amber-pale);
+    border: 1px solid rgba(200,134,10,0.3);
+    border-radius: 2px;
+  }
+
+  /* ─── SECTORS ─── */
+  #sectors {
+    background: var(--navy);
+    padding: 5.5rem 4rem;
+  }
+
+  #sectors .section-label { color: var(--amber-bright); }
+  #sectors .section-label::before { background: var(--amber-bright); }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .sector-cell {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem 1.5rem;
+    border-radius: 2px;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+
+  .sector-cell:hover {
+    background: rgba(200,134,10,0.15);
+    border-color: var(--amber);
+    transform: translateY(-3px);
+  }
+
+  .sector-cell p {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    transition: color 0.2s;
+  }
+
+  .sector-cell:hover p { color: var(--white); }
+
+  /* ─── PROCESS ─── */
+  #process { background: var(--white); }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .process-step {
+    padding: 2.2rem 2rem;
+    border-left: 3px solid var(--cloud-mid);
+    background: var(--cloud);
+    transition: border-color 0.25s;
+  }
+
+  .process-step:hover { border-color: var(--amber); }
+
+  .step-index {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.9rem;
+  }
+
+  .step-title {
+    font-family: var(--serif);
+    font-size: 1.28rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    color: var(--navy);
+  }
+
+  .step-desc {
+    font-size: 0.87rem;
+    color: var(--text-body);
+    line-height: 1.75;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--navy-deep); }
+
+  #contact .section-label { color: var(--amber-bright); }
+  #contact .section-label::before { background: var(--amber-bright); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-headline {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.22;
+    color: var(--white);
+    margin-bottom: 1.4rem;
+  }
+
+  .contact-body {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-promise {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 2.5rem;
+  }
+
+  .promise-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .promise-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    margin-top: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  .promise-text {
+    font-size: 0.87rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+  }
+
+  /* form */
+  .contact-form { display: flex; flex-direction: column; gap: 1.3rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.45rem; }
+
+  .form-group label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 0.93rem;
+    font-weight: 400;
+    color: var(--white);
+    padding: 0.85rem 1rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--amber);
+    background: rgba(255,255,255,0.1);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-group select {
+    color: rgba(255,255,255,0.75);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='rgba(255,255,255,0.4)' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-group select option { background: var(--navy); color: var(--white); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .btn-submit {
+    display: block;
+    width: 100%;
+    background: var(--amber);
+    color: var(--white);
+    border: none;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1.05rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover { background: var(--amber-bright); transform: translateY(-2px); }
+
+  .form-note {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy-deep);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-name {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-tagline {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-nav { display: flex; gap: 2rem; justify-content: center; list-style: none; }
+
+  .footer-nav a {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-nav a:hover { color: var(--amber-bright); }
+
+  .footer-right { text-align: right; }
+
+  .footer-legal {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.28);
+    line-height: 1.65;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    nav { padding: 1.2rem 2.5rem; }
+    section { padding: 5rem 2.5rem; }
+    #positioning, #sectors, #contact, footer { padding-left: 2.5rem; padding-right: 2.5rem; }
+    .positioning-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .sectors-grid { grid-template-columns: repeat(3, 1fr); }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .approach-grid { grid-template-columns: 1fr 1fr; }
+    .engagements-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 4rem 1.5rem; }
+    #home { padding: 7rem 1.5rem 4rem; }
+    #positioning, #sectors, #contact { padding: 4rem 1.5rem; }
+    footer { padding: 2.5rem 1.5rem; grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
+    .footer-nav { justify-content: center; }
+    .footer-right { text-align: center; }
+    .approach-grid, .sectors-grid { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-bottom { display: none; }
+    .engagement-item { grid-template-columns: 1fr; }
+    .engagement-for { width: fit-content; }
+  }
+
+  @media (max-width: 480px) {
+    .approach-grid, .sectors-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    PrairiePulse
+    <span>Research &amp; Consulting LLP</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#engagements">Engagements</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#contact" class="nav-cta">Initiate Engagement</a></li>
+  </ul>
+  <div class="hamburger" id="menuToggle" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose">Close</button>
+  <a href="#approach" onclick="closeMobile()">Approach</a>
+  <a href="#engagements" onclick="closeMobile()">Engagements</a>
+  <a href="#sectors" onclick="closeMobile()">Sectors</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-content">
+    <p class="hero-tag">Global Boutique Consulting &amp; Social Research</p>
+    <h1 class="hero-headline">
+      One Objective.<br>
+      <em>Structured Execution.</em><br>
+      Measurable Outcome.
+    </h1>
+    <p class="hero-sub">
+      PrairiePulse engages on a single, defined objective per mandate. We deliver against it with rigour, through structured task units and evidence-informed advisory.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Discuss an Engagement</a>
+      <a href="#engagements" class="btn-ghost">View Engagements &rarr;</a>
+    </div>
+    <p class="hero-microcopy">No retainers. No scope creep. Defined deliverables from day one.</p>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-tagline">Objective-Led. Outcome-Delivered.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- POSITIONING -->
+<section id="positioning">
+  <p class="section-label">Our Position</p>
+  <div class="positioning-grid">
+    <div>
+      <h2 class="positioning-headline reveal">
+        Consulting informed<br>by research.<br>
+        <em>Research applied<br>to decisions.</em>
+      </h2>
+    </div>
+    <div>
+      <p class="positioning-body reveal">
+        Most consulting firms separate advisory from research. PrairiePulse does not. Every engagement draws on both: <strong>structured methodologies from the research discipline, applied to real organisational and policy challenges.</strong>
+      </p>
+      <p class="positioning-body reveal">
+        We are not a market research agency. We are not a generalist consulting firm. We operate at the intersection — where evidence informs strategy and strategy defines inquiry.
+      </p>
+      <p class="positioning-body reveal">
+        Our engagements are scoped, time-bound, and tied to a specific outcome. Global in outlook. Disciplined in execution.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <p class="section-label">How We Work</p>
+  <div class="approach-grid reveal">
+    <div class="approach-card">
+      <div class="approach-number">01</div>
+      <p class="approach-label">Define</p>
+      <h3 class="approach-title">One Agreed Objective</h3>
+      <p class="approach-desc">Every engagement begins with a single, agreed objective. No ambiguity in scope. No moving targets mid-engagement. Clarity is established before any work begins.</p>
+    </div>
+    <div class="approach-card">
+      <div class="approach-number">02</div>
+      <p class="approach-label">Structure</p>
+      <h3 class="approach-title">Discrete Task Units</h3>
+      <p class="approach-desc">Work is divided into defined units, each with explicit inputs, outputs, and timelines. Progress is transparent at every stage. No black boxes.</p>
+    </div>
+    <div class="approach-card">
+      <div class="approach-number">03</div>
+      <p class="approach-label">Deliver</p>
+      <h3 class="approach-title">Actionable Outputs</h3>
+      <p class="approach-desc">Outcomes are documented, measurable, and transferable. Clients receive outputs they can act on directly — not presentations that require interpretation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="engagements">
+  <p class="section-label">Engagements</p>
+  <div class="engagements-intro">
+    <h2 class="engagements-headline reveal">We do not offer service packages. We structure engagements around your objective.</h2>
+    <p class="engagements-subhead reveal">Each mandate is scoped to a single, defined challenge — strategic, operational, research, or advisory. Scope, methodology, and deliverables are agreed in writing before work begins.</p>
+  </div>
+
+  <div class="engagement-list">
+    <div class="engagement-item reveal">
+      <div class="engagement-body">
+        <p class="engagement-number">01</p>
+        <h3 class="engagement-title">Consulting Advisory</h3>
+        <p class="engagement-desc">Scoped mandates addressing a single strategic, operational, or organisational challenge. Typical scope includes market entry assessment, competitive landscape analysis, go-to-market strategy, and organisational restructuring advisory.</p>
+      </div>
+      <div class="engagement-for">MSMEs &amp; Enterprises</div>
+    </div>
+    <div class="engagement-item reveal">
+      <div class="engagement-body">
+        <p class="engagement-number">02</p>
+        <h3 class="engagement-title">Applied Research</h3>
+        <p class="engagement-desc">Evidence built for decisions, not academic publication. Methodologies are selected based on the research question. Typical scope includes primary qualitative and quantitative studies, stakeholder perception research, sector mapping, and policy landscape reviews.</p>
+      </div>
+      <div class="engagement-for">Institutions &amp; Policy Bodies</div>
+    </div>
+    <div class="engagement-item reveal">
+      <div class="engagement-body">
+        <p class="engagement-number">03</p>
+        <h3 class="engagement-title">Ongoing Advisory (Select)</h3>
+        <p class="engagement-desc">In select cases, PrairiePulse accepts ongoing advisory relationships where a defined scope of periodic counsel is agreed in advance. Scope, frequency, and outputs are fixed at the outset. Not open-ended retainers.</p>
+      </div>
+      <div class="engagement-for">Leadership Teams</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <p class="section-label">Sectors</p>
+  <div class="sectors-grid reveal">
+    <div class="sector-cell"><p>Private Sector / MSMEs and Growth-Stage Firms</p></div>
+    <div class="sector-cell"><p>Mid-Sized and Enterprise Corporate</p></div>
+    <div class="sector-cell"><p>Academic and Research Institutions</p></div>
+    <div class="sector-cell"><p>Public Policy and Regulatory Bodies</p></div>
+    <div class="sector-cell"><p>Development and Social Sector</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <p class="section-label">How an Engagement Begins</p>
+  <div class="process-steps reveal">
+    <div class="process-step">
+      <p class="step-index">Step one</p>
+      <h3 class="step-title">Submit a Brief</h3>
+      <p class="step-desc">Use the contact form below to describe the objective you are working toward. A summary of two or three sentences is sufficient to begin.</p>
+    </div>
+    <div class="process-step">
+      <p class="step-index">Step two</p>
+      <h3 class="step-title">Fit Assessment</h3>
+      <p class="step-desc">We assess scope feasibility and engagement fit within two business days. If there is alignment, we respond directly — no automated sequences.</p>
+    </div>
+    <div class="process-step">
+      <p class="step-index">Step three</p>
+      <h3 class="step-title">Engagement Proposal</h3>
+      <p class="step-desc">We propose a structured engagement with defined outputs, timeline, and terms. Nothing proceeds until scope and objective are agreed in writing.</p>
+    </div>
+    <div class="process-step">
+      <p class="step-index">Step four</p>
+      <h3 class="step-title">Work Begins</h3>
+      <p class="step-desc">With scope confirmed, work begins against the agreed task units. Progress is reported at each defined milestone. No surprises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Initiate an Engagement</p>
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <h2 class="contact-headline">Have a defined objective? We can build an engagement around it.</h2>
+      <p class="contact-body">Describe the challenge or outcome you are working toward. We review every submission personally and respond within two business days if there is a fit.</p>
+      <div class="contact-promise">
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text">No sales process. No obligation at first contact.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text">Response within two business days, directly from the team.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text">If there is no fit, we will say so clearly and promptly.</p>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="org">Organisation</label>
+            <input type="text" id="org" name="org" placeholder="Organisation or institution" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="role">Role / Title</label>
+            <input type="text" id="role" name="role" placeholder="Your function or title">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Professional email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="type">Engagement Type</label>
+          <select id="type" name="type">
+            <option value="">Select an engagement type</option>
+            <option value="consulting">Consulting Advisory</option>
+            <option value="research">Applied Research</option>
+            <option value="advisory">Ongoing Advisory</option>
+            <option value="undefined">Not yet defined</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="objective">Objective</label>
+          <textarea id="objective" name="objective" placeholder="In one or two sentences, describe the specific challenge or outcome you are working toward." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">Send Brief</button>
+        <p class="form-note">We review every submission personally. No automated sequences. No sales calls.</p>
+      </form>
+      <div id="formSuccess" style="display:none; padding: 3rem 2rem; background: rgba(255,255,255,0.07); border: 1px solid rgba(200,134,10,0.4); text-align:center; border-radius: 2px;">
+        <p style="font-family: 'DM Serif Display', serif; font-size: 1.6rem; font-weight:400; color: #ffffff; margin-bottom: 0.8rem;">Brief Received.</p>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7;">We will review your submission and respond within two business days if there is a fit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <p class="footer-name">PrairiePulse Research and Consulting LLP</p>
+    <p class="footer-tagline">Objective-Led. Outcome-Delivered.</p>
+  </div>
+  <ul class="footer-nav">
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#engagements">Engagements</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-right">
+    <p class="footer-legal">&copy; 2025 PrairiePulse Research and Consulting LLP<br>All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Nav scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.style.boxShadow = '0 2px 20px rgba(14,14,12,0.08)';
+    } else {
+      navbar.style.boxShadow = 'none';
+    }
+  });
+
+  // Mobile menu
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+  });
+  document.getElementById('menuClose').addEventListener('click', closeMobile);
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // Form submission
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }, 1200);
+  }
+</script>
+</body>
+</html>
