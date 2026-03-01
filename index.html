@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PrairiePulse Research and Consulting LLP</title>
-<meta name="description" content="PrairiePulse is a global boutique consulting and social research firm. Objective-Led. Outcome-Delivered.">
+<meta name="description" content="Project-based advisory and research engagements designed to support clear, accountable decision-making.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
@@ -146,7 +146,7 @@
 
   .mobile-close:hover { color: var(--white); }
 
-  /* ─── SHARED SECTION ─── */
+  /* ─── SHARED ─── */
   section { padding: 7rem 4rem; }
 
   .section-label {
@@ -181,12 +181,13 @@
     justify-content: center;
     padding-top: 7rem;
     padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     background: var(--navy-deep);
     position: relative;
     overflow: hidden;
   }
 
-  /* Subtle diagonal geometric accent */
   #home::after {
     content: '';
     position: absolute;
@@ -199,66 +200,33 @@
     pointer-events: none;
   }
 
-  .hero-content { position: relative; z-index: 1; max-width: 900px; }
-
-  .hero-tag {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--amber-bright);
-    margin-bottom: 1.8rem;
-    opacity: 0;
-    animation: fadeUp 0.7s ease 0.2s forwards;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .hero-tag::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 2px;
-    background: var(--amber-bright);
-    border-radius: 2px;
-  }
+  .hero-content { position: relative; z-index: 1; max-width: 860px; }
 
   .hero-headline {
     font-family: var(--serif);
-    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    font-size: clamp(2.6rem, 5vw, 4.8rem);
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.12;
     color: var(--white);
     margin-bottom: 2rem;
     opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s forwards;
-  }
-
-  .hero-headline em {
-    font-style: italic;
-    color: var(--amber-bright);
+    animation: fadeUp 0.8s ease 0.3s forwards;
   }
 
   .hero-sub {
     font-size: 1.05rem;
     font-weight: 300;
-    color: rgba(255,255,255,0.72);
-    max-width: 540px;
-    line-height: 1.75;
+    color: rgba(255,255,255,0.68);
+    max-width: 560px;
+    line-height: 1.8;
     margin-bottom: 2.8rem;
     opacity: 0;
-    animation: fadeUp 0.8s ease 0.6s forwards;
+    animation: fadeUp 0.8s ease 0.55s forwards;
   }
 
   .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
     opacity: 0;
-    animation: fadeUp 0.8s ease 0.8s forwards;
+    animation: fadeUp 0.8s ease 0.75s forwards;
   }
 
   .btn-primary {
@@ -278,300 +246,278 @@
 
   .btn-primary:hover { background: var(--amber-bright); border-color: var(--amber-bright); transform: translateY(-2px); }
 
-  .btn-ghost {
-    display: inline-block;
-    color: rgba(255,255,255,0.75);
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    padding: 0.9rem 2rem;
-    border: 2px solid rgba(255,255,255,0.25);
-    border-radius: 2px;
-    transition: border-color 0.2s, color 0.2s;
+  /* ─── ENGAGEMENT AREAS ─── */
+  #engagement-areas { background: var(--white); }
+
+  .engagement-areas-intro {
+    max-width: 700px;
+    margin-bottom: 5rem;
   }
 
-  .btn-ghost:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
-
-  .hero-microcopy {
-    margin-top: 1.4rem;
-    font-size: 0.78rem;
-    font-weight: 400;
-    color: rgba(255,255,255,0.4);
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1s forwards;
-  }
-
-  .hero-bottom {
-    position: absolute;
-    bottom: 3rem; right: 4rem;
-    text-align: right;
-    z-index: 1;
-    opacity: 0;
-    animation: fadeIn 1s ease 1.2s forwards;
-  }
-
-  .hero-tagline {
+  .engagement-areas-intro h2 {
     font-family: var(--serif);
-    font-style: italic;
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.3);
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 0;
   }
 
-  /* ─── POSITIONING ─── */
-  #positioning {
-    background: var(--cloud);
-    padding: 6rem 4rem;
-  }
-
-  .positioning-grid {
+  .two-blocks {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
-    margin-top: 0.5rem;
   }
 
-  .positioning-headline {
+  .area-block {}
+
+  .area-block-header {
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 2px solid var(--amber);
+  }
+
+  .area-block-header h3 {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .area-block-header p {
+    font-size: 0.92rem;
+    color: var(--text-body);
+    line-height: 1.75;
+  }
+
+  .area-service {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .area-service:last-child { border-bottom: none; }
+
+  .area-service-title {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+  }
+
+  .area-service ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .area-service ul li {
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.65;
+    padding: 0.2rem 0;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .area-service ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+    font-size: 0.75rem;
+  }
+
+  /* ─── WHY PRAIRIEPULSE ─── */
+  #why { background: var(--cloud); }
+
+  .why-intro {
+    max-width: 680px;
+    margin-bottom: 4rem;
+  }
+
+  .why-intro h2 {
     font-family: var(--serif);
     font-size: clamp(2rem, 3.2vw, 2.9rem);
     font-weight: 400;
-    line-height: 1.22;
     color: var(--navy);
+    margin-bottom: 1.2rem;
   }
 
-  .positioning-headline em {
-    font-style: italic;
-    color: var(--amber);
-  }
-
-  .positioning-body {
+  .why-intro p {
     font-size: 0.97rem;
-    line-height: 1.82;
     color: var(--text-body);
-    margin-bottom: 1.4rem;
+    line-height: 1.8;
   }
 
-  .positioning-body strong { color: var(--navy); font-weight: 600; }
-
-  /* ─── APPROACH ─── */
-  #approach { background: var(--white); }
-
-  .approach-grid {
+  .why-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-top: 3.5rem;
   }
 
-  .approach-card {
-    background: var(--cloud);
-    padding: 2.8rem 2.4rem;
+  .why-card {
+    background: var(--white);
+    padding: 2.4rem 2.2rem;
     border-top: 3px solid var(--cloud-mid);
     transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
   }
 
-  .approach-card:hover {
+  .why-card:hover {
     border-color: var(--amber);
     box-shadow: 0 8px 32px rgba(15,31,61,0.08);
     transform: translateY(-3px);
   }
 
-  .approach-number {
-    font-family: var(--serif);
-    font-size: 2.8rem;
-    font-weight: 400;
-    color: var(--cloud-mid);
-    line-height: 1;
+  .why-card-icon {
+    width: 28px;
+    height: 28px;
     margin-bottom: 1.2rem;
-  }
-
-  .approach-label {
-    font-family: var(--sans);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
     color: var(--amber);
-    margin-bottom: 0.6rem;
   }
 
-  .approach-title {
+  .why-card h3 {
     font-family: var(--serif);
-    font-size: 1.55rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    margin-bottom: 1rem;
     color: var(--navy);
+    margin-bottom: 0.75rem;
   }
 
-  .approach-desc {
-    font-size: 0.9rem;
+  .why-card p {
+    font-size: 0.88rem;
     color: var(--text-body);
     line-height: 1.78;
   }
 
-  /* ─── ENGAGEMENTS ─── */
-  #engagements { background: var(--cloud); }
+  /* ─── PROJECT LEADERSHIP ─── */
+  #leadership { background: var(--white); }
 
-  .engagements-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+  .leadership-intro {
+    max-width: 600px;
     margin-bottom: 4rem;
-    align-items: end;
   }
 
-  .engagements-headline {
+  .leadership-intro h2 {
     font-family: var(--serif);
     font-size: clamp(1.9rem, 3vw, 2.7rem);
     font-weight: 400;
-    line-height: 1.22;
     color: var(--navy);
+    margin-bottom: 1rem;
   }
 
-  .engagements-subhead {
+  .leadership-intro p {
     font-size: 0.95rem;
     color: var(--text-body);
     line-height: 1.78;
   }
 
-  .engagement-list { display: flex; flex-direction: column; }
+  .leadership-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 
-  .engagement-item {
+  .leader-row {
     display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: start;
-    gap: 2rem;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
     padding: 2.4rem 0;
     border-bottom: 1px solid var(--rule);
-    transition: padding-left 0.3s ease;
+    align-items: start;
+    transition: padding-left 0.3s;
   }
 
-  .engagement-item:first-child { border-top: 1px solid var(--rule); }
-  .engagement-item:hover { padding-left: 0.8rem; }
+  .leader-row:first-child { border-top: 1px solid var(--rule); }
+  .leader-row:hover { padding-left: 0.6rem; }
 
-  .engagement-number {
+  .leader-role {
     font-family: var(--sans);
     font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--amber);
-    margin-bottom: 0.5rem;
-  }
-
-  .engagement-title {
-    font-family: var(--serif);
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0.6rem;
-    color: var(--navy);
-  }
-
-  .engagement-desc {
-    font-size: 0.9rem;
-    color: var(--text-body);
-    line-height: 1.75;
-    max-width: 560px;
-  }
-
-  .engagement-for {
-    font-size: 0.7rem;
-    font-family: var(--sans);
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--navy);
-    white-space: nowrap;
-    margin-top: 0.5rem;
-    padding: 0.45rem 1rem;
-    background: var(--amber-pale);
-    border: 1px solid rgba(200,134,10,0.3);
-    border-radius: 2px;
-  }
-
-  /* ─── SECTORS ─── */
-  #sectors {
-    background: var(--navy);
-    padding: 5.5rem 4rem;
-  }
-
-  #sectors .section-label { color: var(--amber-bright); }
-  #sectors .section-label::before { background: var(--amber-bright); }
-
-  .sectors-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .sector-cell {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 2rem 1.5rem;
-    border-radius: 2px;
-    transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  }
-
-  .sector-cell:hover {
-    background: rgba(200,134,10,0.15);
-    border-color: var(--amber);
-    transform: translateY(-3px);
-  }
-
-  .sector-cell p {
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.6;
-    transition: color 0.2s;
-  }
-
-  .sector-cell:hover p { color: var(--white); }
-
-  /* ─── PROCESS ─── */
-  #process { background: var(--white); }
-
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3.5rem;
-  }
-
-  .process-step {
-    padding: 2.2rem 2rem;
-    border-left: 3px solid var(--cloud-mid);
-    background: var(--cloud);
-    transition: border-color 0.25s;
-  }
-
-  .process-step:hover { border-color: var(--amber); }
-
-  .step-index {
-    font-family: var(--sans);
-    font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--amber);
-    margin-bottom: 0.9rem;
+    line-height: 1.5;
   }
 
-  .step-title {
-    font-family: var(--serif);
-    font-size: 1.28rem;
-    font-weight: 400;
-    margin-bottom: 0.8rem;
-    color: var(--navy);
-  }
-
-  .step-desc {
-    font-size: 0.87rem;
+  .leader-bio {
+    font-size: 0.92rem;
     color: var(--text-body);
-    line-height: 1.75;
+    line-height: 1.8;
+  }
+
+  /* ─── ENGAGEMENT PATHWAY ─── */
+  #pathway { background: var(--navy); }
+
+  #pathway .section-label { color: var(--amber-bright); }
+  #pathway .section-label::before { background: var(--amber-bright); }
+
+  .pathway-intro {
+    margin-bottom: 4rem;
+  }
+
+  .pathway-intro h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .pathway-intro p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .pathway-steps {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 0;
+    align-items: start;
+  }
+
+  .pathway-step {}
+
+  .pathway-step-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  .pathway-step-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .pathway-step p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.78;
+  }
+
+  .pathway-arrow {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: rgba(200,134,10,0.5);
+    font-size: 1.2rem;
+  }
+
+  .pathway-arrow svg {
+    width: 32px;
+    height: 16px;
   }
 
   /* ─── CONTACT ─── */
@@ -580,59 +526,26 @@
   #contact .section-label { color: var(--amber-bright); }
   #contact .section-label::before { background: var(--amber-bright); }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
-    align-items: start;
+  .contact-intro {
+    max-width: 580px;
+    margin-bottom: 3.5rem;
   }
 
-  .contact-headline {
+  .contact-intro h2 {
     font-family: var(--serif);
-    font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
     font-weight: 400;
-    line-height: 1.22;
     color: var(--white);
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
   }
 
-  .contact-body {
+  .contact-intro p {
     font-size: 0.95rem;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-  }
-
-  .contact-promise {
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    margin-top: 2.5rem;
-  }
-
-  .promise-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .promise-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--amber);
-    margin-top: 0.6rem;
-    flex-shrink: 0;
-  }
-
-  .promise-text {
-    font-size: 0.87rem;
     color: rgba(255,255,255,0.6);
-    line-height: 1.65;
+    line-height: 1.78;
   }
 
-  /* form */
-  .contact-form { display: flex; flex-direction: column; gap: 1.3rem; }
+  .contact-form { display: flex; flex-direction: column; gap: 1.3rem; max-width: 700px; }
 
   .form-group { display: flex; flex-direction: column; gap: 0.45rem; }
 
@@ -686,8 +599,7 @@
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
   .btn-submit {
-    display: block;
-    width: 100%;
+    display: inline-block;
     background: var(--amber);
     color: var(--white);
     border: none;
@@ -696,21 +608,73 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 1.05rem;
+    padding: 1rem 2.4rem;
     cursor: pointer;
     border-radius: 2px;
     transition: background 0.2s, transform 0.15s;
     margin-top: 0.5rem;
+    align-self: flex-start;
   }
 
   .btn-submit:hover { background: var(--amber-bright); transform: translateY(-2px); }
 
-  .form-note {
-    font-size: 0.75rem;
+  .form-confidentiality {
+    font-size: 0.78rem;
     color: rgba(255,255,255,0.35);
-    line-height: 1.65;
-    text-align: center;
+    margin-top: 1rem;
   }
+
+  /* ─── QUANTITATIVE PRACTICE ─── */
+  #quant {
+    background: var(--cloud);
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .quant-text {}
+
+  .quant-text h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .quant-text p {
+    font-size: 0.92rem;
+    color: var(--text-body);
+    line-height: 1.75;
+    max-width: 520px;
+  }
+
+  .quant-text p.quant-sub {
+    margin-top: 0.4rem;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+  }
+
+  .btn-quant {
+    display: inline-block;
+    background: transparent;
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 2px;
+    border: 2px solid var(--navy);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .btn-quant:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
 
   /* ─── FOOTER ─── */
   footer {
@@ -739,7 +703,7 @@
     letter-spacing: 0.05em;
   }
 
-  .footer-nav { display: flex; gap: 2rem; justify-content: center; list-style: none; }
+  .footer-nav { display: flex; gap: 2rem; justify-content: center; list-style: none; flex-wrap: wrap; }
 
   .footer-nav a {
     font-size: 0.75rem;
@@ -779,15 +743,23 @@
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* ─── RESPONSIVE ─── */
+  @media (max-width: 1100px) {
+    .two-blocks { grid-template-columns: 1fr; gap: 4rem; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .pathway-steps {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .pathway-arrow { display: none; }
+    #quant { flex-direction: column; align-items: flex-start; }
+  }
+
   @media (max-width: 1024px) {
     nav { padding: 1.2rem 2.5rem; }
     section { padding: 5rem 2.5rem; }
-    #positioning, #sectors, #contact, footer { padding-left: 2.5rem; padding-right: 2.5rem; }
-    .positioning-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .sectors-grid { grid-template-columns: repeat(3, 1fr); }
-    .process-steps { grid-template-columns: repeat(2, 1fr); }
-    .approach-grid { grid-template-columns: 1fr 1fr; }
-    .engagements-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+    #quant { padding: 4rem 2.5rem; }
+    .leader-row { grid-template-columns: 1fr; gap: 0.75rem; }
+    footer { padding-left: 2.5rem; padding-right: 2.5rem; }
   }
 
   @media (max-width: 768px) {
@@ -796,21 +768,18 @@
     .hamburger { display: flex; }
     section { padding: 4rem 1.5rem; }
     #home { padding: 7rem 1.5rem 4rem; }
-    #positioning, #sectors, #contact { padding: 4rem 1.5rem; }
+    #quant { padding: 3.5rem 1.5rem; }
     footer { padding: 2.5rem 1.5rem; grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
     .footer-nav { justify-content: center; }
     .footer-right { text-align: center; }
-    .approach-grid, .sectors-grid { grid-template-columns: 1fr 1fr; }
-    .process-steps { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .hero-bottom { display: none; }
-    .engagement-item { grid-template-columns: 1fr; }
-    .engagement-for { width: fit-content; }
+    .btn-submit { width: 100%; text-align: center; }
+    .two-blocks { gap: 3rem; }
   }
 
   @media (max-width: 480px) {
-    .approach-grid, .sectors-grid { grid-template-columns: 1fr; }
-    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero-headline { font-size: 2.4rem; }
   }
 </style>
 </head>
@@ -823,10 +792,10 @@
     <span>Research &amp; Consulting LLP</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#approach">Approach</a></li>
-    <li><a href="#engagements">Engagements</a></li>
-    <li><a href="#sectors">Sectors</a></li>
-    <li><a href="#contact" class="nav-cta">Initiate Engagement</a></li>
+    <li><a href="#engagement-areas">Engagement Areas</a></li>
+    <li><a href="#why">Why PrairiePulse</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#contact" class="nav-cta">Discuss a Mandate</a></li>
   </ul>
   <div class="hamburger" id="menuToggle" aria-label="Open menu" role="button" tabindex="0">
     <span></span><span></span><span></span>
@@ -836,229 +805,321 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" id="menuClose">Close</button>
-  <a href="#approach" onclick="closeMobile()">Approach</a>
-  <a href="#engagements" onclick="closeMobile()">Engagements</a>
-  <a href="#sectors" onclick="closeMobile()">Sectors</a>
+  <a href="#engagement-areas" onclick="closeMobile()">Engagement Areas</a>
+  <a href="#why" onclick="closeMobile()">Why PrairiePulse</a>
+  <a href="#leadership" onclick="closeMobile()">Leadership</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section id="home">
   <div class="hero-content">
-    <p class="hero-tag">Global Boutique Consulting &amp; Social Research</p>
     <h1 class="hero-headline">
-      One Objective.<br>
-      <em>Structured Execution.</em><br>
-      Measurable Outcome.
+      Bringing Structure to Complex Business Decisions and Research Questions
     </h1>
     <p class="hero-sub">
-      PrairiePulse engages on a single, defined objective per mandate. We deliver against it with rigour, through structured task units and evidence-informed advisory.
+      Project-based advisory and research engagements designed to support clear, accountable decision-making.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Discuss an Engagement</a>
-      <a href="#engagements" class="btn-ghost">View Engagements &rarr;</a>
-    </div>
-    <p class="hero-microcopy">No retainers. No scope creep. Defined deliverables from day one.</p>
-  </div>
-  <div class="hero-bottom">
-    <p class="hero-tagline">Objective-Led. Outcome-Delivered.</p>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- POSITIONING -->
-<section id="positioning">
-  <p class="section-label">Our Position</p>
-  <div class="positioning-grid">
-    <div>
-      <h2 class="positioning-headline reveal">
-        Consulting informed<br>by research.<br>
-        <em>Research applied<br>to decisions.</em>
-      </h2>
-    </div>
-    <div>
-      <p class="positioning-body reveal">
-        Most consulting firms separate advisory from research. PrairiePulse does not. Every engagement draws on both: <strong>structured methodologies from the research discipline, applied to real organisational and policy challenges.</strong>
-      </p>
-      <p class="positioning-body reveal">
-        We are not a market research agency. We are not a generalist consulting firm. We operate at the intersection — where evidence informs strategy and strategy defines inquiry.
-      </p>
-      <p class="positioning-body reveal">
-        Our engagements are scoped, time-bound, and tied to a specific outcome. Global in outlook. Disciplined in execution.
-      </p>
+      <a href="#contact" class="btn-primary">Discuss a Consulting Mandate</a>
     </div>
   </div>
 </section>
 
-<!-- APPROACH -->
-<section id="approach">
+<!-- 2. ENGAGEMENT AREAS -->
+<section id="engagement-areas">
+  <p class="section-label">Engagement Areas</p>
+  <div class="engagement-areas-intro reveal">
+    <h2>Where We Engage</h2>
+  </div>
+  <div class="two-blocks">
+
+    <!-- Corporate -->
+    <div class="area-block reveal">
+      <div class="area-block-header">
+        <h3>Corporate Strategy &amp; Advisory</h3>
+        <p>We support organizations in addressing complex business questions through structured analysis and measurable decision support.</p>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Strategic Analysis</p>
+        <ul>
+          <li>Market entry and expansion assessment</li>
+          <li>Business model evaluation</li>
+          <li>Competitive positioning analysis</li>
+          <li>Structuring growth pathways for informed decision-making</li>
+        </ul>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Market &amp; Industry Insights</p>
+        <ul>
+          <li>Industry landscape analysis</li>
+          <li>Competitor benchmarking</li>
+          <li>Demand and opportunity assessment</li>
+          <li>Strategic intelligence synthesis</li>
+        </ul>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Forecasting &amp; Scenario Modeling</p>
+        <ul>
+          <li>Revenue forecasting</li>
+          <li>Scenario and sensitivity analysis</li>
+          <li>Risk assessment frameworks</li>
+          <li>Structured decision comparison</li>
+        </ul>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Performance &amp; Measurement Frameworks</p>
+        <ul>
+          <li>Designing KPI frameworks for performance accountability</li>
+          <li>Performance tracking structures</li>
+          <li>Outcome monitoring models</li>
+          <li>Analytical review processes</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Academic -->
+    <div class="area-block reveal">
+      <div class="area-block-header">
+        <h3>Academic Research &amp; Methodological Advisory</h3>
+        <p>We collaborate with researchers and academic institutions globally on project-based engagements, providing structured methodological support and India-based field research coordination.</p>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Research Design &amp; Structuring</p>
+        <ul>
+          <li>Research architecture development</li>
+          <li>Survey and interview framework design</li>
+          <li>Sampling strategy formulation</li>
+          <li>Hypothesis and research question alignment</li>
+        </ul>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Quantitative Analysis Support</p>
+        <ul>
+          <li>Statistical model guidance</li>
+          <li>Econometric advisory</li>
+          <li>Variable operationalization</li>
+          <li>Model validation and robustness checks</li>
+        </ul>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Qualitative Research &amp; Field Support</p>
+        <ul>
+          <li>Interview and focus group design</li>
+          <li>Thematic coding frameworks</li>
+          <li>Content and narrative analysis</li>
+          <li>On-ground data collection support in India</li>
+          <li>Field research coordination in India</li>
+          <li>Context-sensitive primary data interpretation</li>
+        </ul>
+      </div>
+
+      <div class="area-service">
+        <p class="area-service-title">Publication-Oriented Analytical Review</p>
+        <ul>
+          <li>Methodological refinement</li>
+          <li>Analytical consistency review</li>
+          <li>Results interpretation alignment</li>
+          <li>Reviewer-response structuring</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 3. WHY PRAIRIEPULSE -->
+<section id="why">
+  <p class="section-label">Why PrairiePulse</p>
+  <div class="why-intro reveal">
+    <h2>Why PrairiePulse</h2>
+    <p>PrairiePulse operates with structured analytical discipline, clear project ownership, and measurable accountability.<br>Our model is lean, focused, and built around clearly defined objectives and measurable outcomes.</p>
+  </div>
+  <div class="why-grid">
+
+    <div class="why-card reveal">
+      <svg class="why-card-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="4" width="20" height="20" rx="2"/>
+        <path d="M4 10h20M10 10v14"/>
+      </svg>
+      <h3>Structured, Not Generic</h3>
+      <p>Every engagement begins with a clearly defined problem framework. We prioritize analytical clarity before solution design.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <svg class="why-card-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10" cy="14" r="6"/>
+        <circle cx="18" cy="14" r="6"/>
+      </svg>
+      <h3>Corporate &amp; Academic Perspective</h3>
+      <p>Our work bridges business strategy and research methodology, enabling structured thinking across sectors.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <svg class="why-card-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="14" cy="10" r="4"/>
+        <path d="M6 24c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+      </svg>
+      <h3>Direct Engagement Leadership</h3>
+      <p>Projects are led by experienced practitioners, ensuring depth, accountability, and continuity throughout the engagement.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <svg class="why-card-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 20l4-8 4 5 3-4 5 7"/>
+        <rect x="3" y="3" width="22" height="22" rx="2"/>
+      </svg>
+      <h3>Project-Based &amp; Outcome-Oriented</h3>
+      <p>We operate on clearly defined scopes with measurable objectives, maintaining focus and delivery discipline. Clearly defined scope, timelines, and deliverables guide every engagement.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <svg class="why-card-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 4C8.5 4 4 8.5 4 14s4.5 10 10 10 10-4.5 10-10S19.5 4 14 4z"/>
+        <path d="M4 14h20M14 4c-3 3-4.5 6.3-4.5 10S11 21 14 24c3-3 4.5-6.3 4.5-10S17 7 14 4z"/>
+      </svg>
+      <h3>India-Based Field Capability</h3>
+      <p>For global research engagements, we provide structured field research coordination and on-ground data collection support in India.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 4. PROJECT LEADERSHIP -->
+<section id="leadership">
+  <p class="section-label">Project Leadership</p>
+  <div class="leadership-intro reveal">
+    <h2>Project Leadership</h2>
+    <p>Our engagements are led by experienced practitioners across strategy, analytics, and research.</p>
+  </div>
+  <div class="leadership-stack">
+
+    <div class="leader-row reveal">
+      <p class="leader-role">Management Consulting Lead</p>
+      <p class="leader-bio">A strategy professional with over eight years of experience working with established boutique consulting firms. Brings structured problem-solving, business analysis, and practical execution support to complex corporate and institutional projects.</p>
+    </div>
+
+    <div class="leader-row reveal">
+      <p class="leader-role">Data Science &amp; Analytics Lead</p>
+      <p class="leader-bio">An experienced data practitioner with over five years of experience delivering analytical and modeling solutions. Focused on translating data into clear, decision-oriented insights.</p>
+    </div>
+
+    <div class="leader-row reveal">
+      <p class="leader-role">Social Sciences Research Lead</p>
+      <p class="leader-bio">A doctoral-level researcher trained at leading Indian institutions, with experience delivering interdisciplinary research projects. Provides methodological rigor across qualitative and quantitative approaches, including field research coordination in India.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 5. ENGAGEMENT PATHWAY -->
+<section id="pathway">
   <p class="section-label">How We Work</p>
-  <div class="approach-grid reveal">
-    <div class="approach-card">
-      <div class="approach-number">01</div>
-      <p class="approach-label">Define</p>
-      <h3 class="approach-title">One Agreed Objective</h3>
-      <p class="approach-desc">Every engagement begins with a single, agreed objective. No ambiguity in scope. No moving targets mid-engagement. Clarity is established before any work begins.</p>
+  <div class="pathway-intro reveal">
+    <h2>Engagement Pathway</h2>
+    <p>A clear and accountable engagement pathway.</p>
+  </div>
+  <div class="pathway-steps reveal">
+
+    <div class="pathway-step">
+      <div class="pathway-step-num">1</div>
+      <h3 class="pathway-step-title">Scope Review</h3>
+      <p>We assess alignment, clarify objectives, and define the core problem.</p>
     </div>
-    <div class="approach-card">
-      <div class="approach-number">02</div>
-      <p class="approach-label">Structure</p>
-      <h3 class="approach-title">Discrete Task Units</h3>
-      <p class="approach-desc">Work is divided into defined units, each with explicit inputs, outputs, and timelines. Progress is transparent at every stage. No black boxes.</p>
+
+    <div class="pathway-arrow">
+      <svg viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 8h28M22 2l8 6-8 6" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </div>
-    <div class="approach-card">
-      <div class="approach-number">03</div>
-      <p class="approach-label">Deliver</p>
-      <h3 class="approach-title">Actionable Outputs</h3>
-      <p class="approach-desc">Outcomes are documented, measurable, and transferable. Clients receive outputs they can act on directly — not presentations that require interpretation.</p>
+
+    <div class="pathway-step">
+      <div class="pathway-step-num">2</div>
+      <h3 class="pathway-step-title">Structured Proposal</h3>
+      <p>We outline scope, timelines, deliverables, and engagement terms.</p>
     </div>
+
+    <div class="pathway-arrow">
+      <svg viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 8h28M22 2l8 6-8 6" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="pathway-step">
+      <div class="pathway-step-num">3</div>
+      <h3 class="pathway-step-title">Project Initiation</h3>
+      <p>Work begins with defined milestones, communication cadence, and measurable checkpoints.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- ENGAGEMENTS -->
-<section id="engagements">
-  <p class="section-label">Engagements</p>
-  <div class="engagements-intro">
-    <h2 class="engagements-headline reveal">We do not offer service packages. We structure engagements around your objective.</h2>
-    <p class="engagements-subhead reveal">Each mandate is scoped to a single, defined challenge — strategic, operational, research, or advisory. Scope, methodology, and deliverables are agreed in writing before work begins.</p>
-  </div>
-
-  <div class="engagement-list">
-    <div class="engagement-item reveal">
-      <div class="engagement-body">
-        <p class="engagement-number">01</p>
-        <h3 class="engagement-title">Consulting Advisory</h3>
-        <p class="engagement-desc">Scoped mandates addressing a single strategic, operational, or organisational challenge. Typical scope includes market entry assessment, competitive landscape analysis, go-to-market strategy, and organisational restructuring advisory.</p>
-      </div>
-      <div class="engagement-for">MSMEs &amp; Enterprises</div>
-    </div>
-    <div class="engagement-item reveal">
-      <div class="engagement-body">
-        <p class="engagement-number">02</p>
-        <h3 class="engagement-title">Applied Research</h3>
-        <p class="engagement-desc">Evidence built for decisions, not academic publication. Methodologies are selected based on the research question. Typical scope includes primary qualitative and quantitative studies, stakeholder perception research, sector mapping, and policy landscape reviews.</p>
-      </div>
-      <div class="engagement-for">Institutions &amp; Policy Bodies</div>
-    </div>
-    <div class="engagement-item reveal">
-      <div class="engagement-body">
-        <p class="engagement-number">03</p>
-        <h3 class="engagement-title">Ongoing Advisory (Select)</h3>
-        <p class="engagement-desc">In select cases, PrairiePulse accepts ongoing advisory relationships where a defined scope of periodic counsel is agreed in advance. Scope, frequency, and outputs are fixed at the outset. Not open-ended retainers.</p>
-      </div>
-      <div class="engagement-for">Leadership Teams</div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTORS -->
-<section id="sectors">
-  <p class="section-label">Sectors</p>
-  <div class="sectors-grid reveal">
-    <div class="sector-cell"><p>Private Sector / MSMEs and Growth-Stage Firms</p></div>
-    <div class="sector-cell"><p>Mid-Sized and Enterprise Corporate</p></div>
-    <div class="sector-cell"><p>Academic and Research Institutions</p></div>
-    <div class="sector-cell"><p>Public Policy and Regulatory Bodies</p></div>
-    <div class="sector-cell"><p>Development and Social Sector</p></div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <p class="section-label">How an Engagement Begins</p>
-  <div class="process-steps reveal">
-    <div class="process-step">
-      <p class="step-index">Step one</p>
-      <h3 class="step-title">Submit a Brief</h3>
-      <p class="step-desc">Use the contact form below to describe the objective you are working toward. A summary of two or three sentences is sufficient to begin.</p>
-    </div>
-    <div class="process-step">
-      <p class="step-index">Step two</p>
-      <h3 class="step-title">Fit Assessment</h3>
-      <p class="step-desc">We assess scope feasibility and engagement fit within two business days. If there is alignment, we respond directly — no automated sequences.</p>
-    </div>
-    <div class="process-step">
-      <p class="step-index">Step three</p>
-      <h3 class="step-title">Engagement Proposal</h3>
-      <p class="step-desc">We propose a structured engagement with defined outputs, timeline, and terms. Nothing proceeds until scope and objective are agreed in writing.</p>
-    </div>
-    <div class="process-step">
-      <p class="step-index">Step four</p>
-      <h3 class="step-title">Work Begins</h3>
-      <p class="step-desc">With scope confirmed, work begins against the agreed task units. Progress is reported at each defined milestone. No surprises.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
+<!-- 6. REQUEST A CONSULTATION -->
 <section id="contact">
-  <p class="section-label">Initiate an Engagement</p>
-  <div class="contact-grid">
-    <div class="contact-left reveal">
-      <h2 class="contact-headline">Have a defined objective? We can build an engagement around it.</h2>
-      <p class="contact-body">Describe the challenge or outcome you are working toward. We review every submission personally and respond within two business days if there is a fit.</p>
-      <div class="contact-promise">
-        <div class="promise-item">
-          <div class="promise-dot"></div>
-          <p class="promise-text">No sales process. No obligation at first contact.</p>
-        </div>
-        <div class="promise-item">
-          <div class="promise-dot"></div>
-          <p class="promise-text">Response within two business days, directly from the team.</p>
-        </div>
-        <div class="promise-item">
-          <div class="promise-dot"></div>
-          <p class="promise-text">If there is no fit, we will say so clearly and promptly.</p>
-        </div>
+  <p class="section-label">Get in Touch</p>
+  <div class="contact-intro reveal">
+    <h2>Request a Consultation</h2>
+    <p>If you would like to discuss a potential engagement, share a brief outline of your requirement. We will review and respond within 48 hours.</p>
+  </div>
+
+  <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="org">Organization / Institution</label>
+        <input type="text" id="org" name="org" placeholder="Organization or institution" required>
       </div>
     </div>
-    <div class="reveal">
-      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
-          </div>
-          <div class="form-group">
-            <label for="org">Organisation</label>
-            <input type="text" id="org" name="org" placeholder="Organisation or institution" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="role">Role / Title</label>
-            <input type="text" id="role" name="role" placeholder="Your function or title">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Professional email" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="type">Engagement Type</label>
-          <select id="type" name="type">
-            <option value="">Select an engagement type</option>
-            <option value="consulting">Consulting Advisory</option>
-            <option value="research">Applied Research</option>
-            <option value="advisory">Ongoing Advisory</option>
-            <option value="undefined">Not yet defined</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="objective">Objective</label>
-          <textarea id="objective" name="objective" placeholder="In one or two sentences, describe the specific challenge or outcome you are working toward." required></textarea>
-        </div>
-        <button type="submit" class="btn-submit" id="submitBtn">Send Brief</button>
-        <p class="form-note">We review every submission personally. No automated sequences. No sales calls.</p>
-      </form>
-      <div id="formSuccess" style="display:none; padding: 3rem 2rem; background: rgba(255,255,255,0.07); border: 1px solid rgba(200,134,10,0.4); text-align:center; border-radius: 2px;">
-        <p style="font-family: 'DM Serif Display', serif; font-size: 1.6rem; font-weight:400; color: #ffffff; margin-bottom: 0.8rem;">Brief Received.</p>
-        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7;">We will review your submission and respond within two business days if there is a fit.</p>
-      </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Professional email" required>
     </div>
+    <div class="form-group">
+      <label for="type">Engagement Type</label>
+      <select id="type" name="type">
+        <option value="">Select an engagement type</option>
+        <option value="corporate-strategy">Corporate Strategy &amp; Advisory</option>
+        <option value="academic-research">Academic Research &amp; Methodological Advisory</option>
+        <option value="other">Other / Not yet defined</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Brief Description</label>
+      <textarea id="description" name="description" placeholder="Describe the challenge or requirement you are working toward." required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="timeline">Timeline (Optional)</label>
+      <input type="text" id="timeline" name="timeline" placeholder="Indicative timeline, if applicable">
+    </div>
+    <button type="submit" class="btn-submit" id="submitBtn">Submit Inquiry</button>
+    <p class="form-confidentiality">All inquiries are handled confidentially.</p>
+  </form>
+
+  <div id="formSuccess" style="display:none; padding: 3rem 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(200,134,10,0.4); max-width: 700px; border-radius: 2px;">
+    <p style="font-family: 'DM Serif Display', serif; font-size: 1.6rem; font-weight:400; color: #ffffff; margin-bottom: 0.8rem;">Inquiry Received.</p>
+    <p style="font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7;">We will review your submission and respond within 48 hours.</p>
   </div>
 </section>
+
+<!-- 7. QUANTITATIVE PRACTICE -->
+<div id="quant">
+  <div class="quant-text">
+    <h2>Interested in sharpening your quantitative reasoning?</h2>
+    <p>Explore a set of foundational exercises and see how you approach structured problems.</p>
+    <p class="quant-sub">Free to begin. Go deeper if you choose.</p>
+  </div>
+  <a href="#" class="btn-quant">Begin Practice</a>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1067,9 +1128,10 @@
     <p class="footer-tagline">Objective-Led. Outcome-Delivered.</p>
   </div>
   <ul class="footer-nav">
-    <li><a href="#approach">Approach</a></li>
-    <li><a href="#engagements">Engagements</a></li>
-    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#engagement-areas">Engagement Areas</a></li>
+    <li><a href="#why">Why PrairiePulse</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#pathway">Pathway</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="footer-right">
@@ -1087,17 +1149,13 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   revealEls.forEach(el => observer.observe(el));
 
   // Nav scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.style.boxShadow = '0 2px 20px rgba(14,14,12,0.08)';
-    } else {
-      navbar.style.boxShadow = 'none';
-    }
+    navbar.style.boxShadow = window.scrollY > 60 ? '0 2px 20px rgba(14,14,12,0.08)' : 'none';
   });
 
   // Mobile menu
