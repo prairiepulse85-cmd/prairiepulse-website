@@ -683,13 +683,16 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    padding-bottom: 0;
+    padding-bottom: 2.4rem; /* aligns with card centre */
   }
 
-  .pathway-connector svg {
-    width: 40px;
-    height: 24px;
-    filter: drop-shadow(0 0 5px rgba(200,134,10,0.5));
+  .pathway-connector-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--amber);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(200,134,10,0.25), 0 0 12px rgba(200,134,10,0.4);
+    flex-shrink: 0;
   }
 
   /* Mobile: stack vertically */
@@ -1077,50 +1080,107 @@
   footer {
     background: var(--navy-deep);
     border-top: 1px solid rgba(255,255,255,0.07);
-    padding: 3rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    gap: 2rem;
+    padding: 4.2rem 4rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
+
+  /* Top row: brand left, nav right */
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+
+  .footer-brand {}
 
   .footer-name {
     font-family: var(--serif);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 400;
     color: var(--white);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
   }
 
   .footer-tagline {
     font-family: var(--sans);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 400;
-    color: rgba(255,255,255,0.35);
-    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.06em;
   }
 
-  .footer-nav { display: flex; gap: 2rem; justify-content: center; list-style: none; flex-wrap: wrap; }
+  .footer-nav {
+    display: flex;
+    gap: 2.6rem;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
   .footer-nav a {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.42);
     text-decoration: none;
     transition: color 0.2s;
   }
 
-  .footer-nav a:hover { color: var(--amber-bright); }
+  .footer-nav a:hover { color: rgba(255,255,255,0.85); }
 
-  .footer-right { text-align: right; }
+  /* Divider between top and bottom rows */
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 0;
+  }
+
+  /* Bottom row: legal left, contact right */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.8rem;
+  }
 
   .footer-legal {
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.28);
-    line-height: 1.65;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.25);
+    line-height: 1.7;
   }
+
+  .footer-contact-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-contact-email {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .footer-contact-email:hover {
+    color: rgba(255,255,255,0.9);
+    border-bottom-color: rgba(255,255,255,0.4);
+  }
+
+  .footer-contact { text-align: right; }
 
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
@@ -1151,7 +1211,7 @@
     nav { padding: 1.2rem 2.5rem; }
     section { padding: 5rem 2.5rem; }
     .leader-row { grid-template-columns: 1fr; gap: 0.75rem; }
-    footer { padding-left: 2.5rem; padding-right: 2.5rem; }
+    footer { padding: 3rem 2.5rem 2.5rem; }
   }
 
   @media (max-width: 768px) {
@@ -1162,9 +1222,11 @@
     #home { padding: 7rem 1.5rem 4rem; }
     #quant { padding: 3rem 1.5rem; }
     #internship { padding: 3rem 1.5rem; }
-    footer { padding: 2.5rem 1.5rem; grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
-    .footer-nav { justify-content: center; }
-    .footer-right { text-align: center; }
+    footer { padding: 2.5rem 1.5rem; }
+    .footer-top { flex-direction: column; align-items: flex-start; gap: 1.8rem; }
+    .footer-nav { justify-content: flex-start; gap: 1.4rem; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .footer-contact { text-align: left; }
 
     .form-row { grid-template-columns: 1fr; }
     .btn-submit { width: 100%; text-align: center; }
@@ -1491,12 +1553,9 @@
       </div>
     </div>
 
-    <!-- Arrow 1→2 -->
+    <!-- Connector 1→2 -->
     <div class="pathway-connector">
-      <svg viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 12h30" stroke="#c8860a" stroke-width="2" stroke-linecap="round"/>
-        <path d="M26 5l10 7-10 7" stroke="#c8860a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <div class="pathway-connector-dot"></div>
     </div>
 
     <!-- Step 2 -->
@@ -1508,12 +1567,9 @@
       </div>
     </div>
 
-    <!-- Arrow 2→3 -->
+    <!-- Connector 2→3 -->
     <div class="pathway-connector">
-      <svg viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 12h30" stroke="#c8860a" stroke-width="2" stroke-linecap="round"/>
-        <path d="M26 5l10 7-10 7" stroke="#c8860a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <div class="pathway-connector-dot"></div>
     </div>
 
     <!-- Step 3 -->
@@ -1669,21 +1725,34 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    <p class="footer-name">PrairiePulse Research and Consulting LLP</p>
-    <p class="footer-tagline">Objective-Led. Outcome-Delivered.</p>
+
+  <!-- Top row -->
+  <div class="footer-top">
+    <div class="footer-brand">
+      <p class="footer-name">PrairiePulse Research and Consulting LLP</p>
+      <p class="footer-tagline">Objective-Led. Outcome-Delivered.</p>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="#engagement-areas">Engagement Areas</a></li>
+      <li><a href="#why">Why PrairiePulse</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#pathway">Pathway</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-  <ul class="footer-nav">
-    <li><a href="#engagement-areas">Engagement Areas</a></li>
-    <li><a href="#why">Why PrairiePulse</a></li>
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#pathway">Pathway</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="footer-right">
-    <p class="footer-legal">&copy; 2025 PrairiePulse Research and Consulting LLP<br>All rights reserved.</p>
-    <p class="footer-legal" style="margin-top: 0.6rem;">For general enquiries:<br><a href="mailto:headoffice@prairiepulse.online" style="color: var(--amber); text-decoration: none; transition: color 0.2s;">headoffice@prairiepulse.online</a></p>
+
+  <!-- Divider -->
+  <div class="footer-divider"></div>
+
+  <!-- Bottom row -->
+  <div class="footer-bottom">
+    <p class="footer-legal">&copy; 2025 PrairiePulse Research and Consulting LLP. All rights reserved.</p>
+    <div class="footer-contact">
+      <p class="footer-contact-label">General Inquiries</p>
+      <a href="mailto:headoffice@prairiepulse.online" class="footer-contact-email">headoffice@prairiepulse.online</a>
+    </div>
   </div>
+
 </footer>
 
 <script>
